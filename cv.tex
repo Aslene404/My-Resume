@@ -1,0 +1,256 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % font spec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within the experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colors for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Aslene OUAZE} \\[7.5pt]
+\href{https://github.com/Aslene404}{\raisebox{-0.05\height}\faGithub\ Aslene404} \ $|$ \ 
+\href{https://www.linkedin.com/in/aslene-ouaze-3b5aa91b3}{\raisebox{-0.05\height}\faLinkedin\ Aslene Ouaze} \ $|$ \ 
+\href{https://asleneouaze.crevado.com}{\raisebox{-0.05\height}\faGlobe \ asleneouaze.crevado.com} \ $|$ \ 
+\href{mailto:aslenerazor@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ aslenerazor@gmail.com} \\ \ $|$ \ 
+\href{tel:+21624230865}{\raisebox{-0.05\height}\faMobile \ +216.24.230.865} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+Wishing to constantly develop my
+skills to ensure my
+professional development, I am
+confident in my ability to propose
+interesting projects for companies
+that need them.
+
+%Experience
+\section{Professional Experience}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Flutter Developer at Glocal IT} & \hfill Jun 2022 - Sept 2022 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Design and development of a mobile application similar to the website
+\href{https://sofort-handelsregister.com}{sofort-handelsregister.com} previously developed by the
+company}  \\
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Python Web Scraper at HOH Websolutions} & \hfill Jul 2021 - Sept 2021 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Design and development of web scrapper capable of automatically
+extracting information from the German yellow pages and injecting it
+into a database}  \\
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Freelance Full Stack Developer} & \hfill Jul 2020 - Current \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Design and development of the online platform "BUILD PRO" and the
+website of the French company
+"Msk Energie"}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{MEAN Stack developer at Alfa Computing \& Consulting} & \hfill Jan 2020 - Jun 2020 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Design and development of the online platform "Chanti.tn"}  \\
+\end{tabularx}
+
+
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Build Pro Web Application} & \hfill \href{https://build-pro.herokuapp.com/}{build-pro.herokuapp.com} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Web application developed with MEAN Stack for the Tunisian company Build Pro deployed, in addition to its corresponding API, on Heroku web hosting service, it consists of the company's clients relation manager as well as a space for other smaller enterprises to advertise their services on }  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Sofort Handelsregister Mobile Application} & \hfill  \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Mobile application developed with the dart framework Flutter, it consists of a platform for customers to track specific companies and buy their official documents }  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{MSK-energie Web Application} & \hfill \href{https://msk-energie.herokuapp.com/}{msk-energie.herokuapp.com} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Web application developed with MEAN Stack for the French company "MSK Energie", it consist of a simple showcase website to inform the company's clients}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Predicting Delivery Date \& Time} & \hfill  \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Machine learning project developed with python as a university project, it allows the user to predict his approximate delivery date and time based on the history log of the Tunisian delivery company Dropex as well as providing statistics to the decision maker about different governorates and their relation to the company's business }  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{BKK yellow pages web scrapper} & \hfill  \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Automatic web scrapper of the BKK German yellow pages developed with Python, it consists of a program that automatically extracts information about German health institutes from the BKK yellow pages from :
+\begin{itemize}
+\item \href{https://klinikfinder.bkk-dachverband.de/} {https://klinikfinder.bkk-dachverband.de/}
+
+\item \href{https://pflegefinder.bkk-dachverband.de/} {https://pflegefinder.bkk-dachverband.de/}
+
+\item \href{https://arztfinder.bkk-dachverband.de/} {https://arztfinder.bkk-dachverband.de/}
+
+\item \href{https://hebammenfinder.bkk-dachverband.de/} {https://hebammenfinder.bkk-dachverband.de/}
+
+\end{itemize}  
+The extracted information is organized and saved in a MongoDB database}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Tech RAZ} & \hfill  \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{E-commerce website developed with Joomla CMS as a university project, it consists of a platform for customers to buy used tech products sent to the webmasters by other customers}  \\
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{ISSAT Loc} & \hfill  \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Web application developed with the PHP framework Symfony and MySQL as a university project, it consists of a platform for students searching for rent opportunities around their area as well as a way for house owners to advertise their renting opportunities, both sides can communicate with each other through the application }  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Empolyees Manager} & \hfill  \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Web application developed with Spring Boot and RabbitMQ middleware as a university project, it consists of a simple employee management system that uses RabbitMQ as a communication channel  }  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2021 - present & Software engineering at \textbf{Higher Institute of Applied Sciences and Technology of
+Sousse}  \\
+
+2020 - 2021 & Research master's degree in
+Information Systems for Decision Support (SIAD) at \textbf{Higher Institute of Management of Sousse}  \\
+
+2020 - 2020 & Online certificate in HTML CSS \& JS at \textbf{Coursera}  \\
+
+2017 - 2020 & Fundamental license in computer science at \textbf{Higher Institute of Computer Science of Mahdia}  \\
+
+2013 - 2017 & Bachelor's Degree in experimental science at \textbf{Ibn Sina Mahdia High School} 
+
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{itemize}
+\item \normalsize{Python $\vert$ Dart $\vert$ JavaScript $\vert$ HTML $\vert$ CSS $\vert$ C\# $\vert$ PHP $\vert$ SQL  $\vert$ Typescript $\vert$ Java $\vert$ Kotlin $\vert$ Node $\vert$ Express $\vert$ Angular $\vert$ NOSQL $\vert$ Git $\vert$ Symfony $\vert$ Flutter $\vert$ Bootstrap $\vert$ Tailwind CSS $\vert$ MongoDB $\vert$ J2EE $\vert$ SpringBoot $\vert$ JSON $\vert$ XML $\vert$ RabbitMQ}\\
+\item \normalsize{Frontend $\vert$ Backend $\vert$ Full-Stack $\vert$ English, French, Arabic}\\
+\end{itemize}
+
+
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
