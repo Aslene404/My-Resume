@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.20)  14 APR 2024 16:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.2.20)  3 MAY 2024 19:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -820,16 +820,16 @@ s/H.2023.0170/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5bra
 nds0.enc}{C:/Users/H.2023.0170/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fo
 ntawesome5/fa5free1.enc}{C:/Users/H.2023.0170/AppData/Local/Programs/MiKTeX/fon
 ts/enc/dvips/fontawesome5/fa5free2.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
-[2] (cv.aux)
+[2] [3] (cv.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -841,9 +841,9 @@ Package logreq Info: Writing requests to 'cv.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20547 strings out of 474486
- 377191 string characters out of 5740923
- 1946542 words of memory out of 5000000
+ 20548 strings out of 474486
+ 377197 string characters out of 5740923
+ 1945542 words of memory out of 5000000
  42614 multiletter control sequences out of 15000+600000
  563285 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -860,9 +860,9 @@ ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/H.2023.
 0170/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
 /Users/H.2023.0170/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb>
-Output written on cv.pdf (2 pages, 142832 bytes).
+Output written on cv.pdf (3 pages, 143547 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 8 named destinations out of 1000 (max. 500000)
+ 113 PDF objects out of 1000 (max. 8388607)
+ 9 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
